@@ -25,9 +25,14 @@
 {% endif %}
 </p>
 
+<div id="flash_parent">
 {% for category,message in get_flashed_messages(with_categories=true) %}
-<p class="flash {{ category }}">{{ message }}</p>
+  <p class="flash {{ category }}">
+    <button class="hide">X</button>
+    {{ message }}
+  </p>
 {% endfor %}
+</div>
 
   <nav>
   <p><img src="{{ url_for('static', filename='flask-icon.png') }}" /></p>
@@ -36,6 +41,7 @@
     <li><a href="{{ url_for('info') }}">Info</a></li>
     <li><a href="{{ url_for('abc') }}">ABC</a></li>
     <li><a href="{{ url_for('malina') }}">Malina</a></li>
+    <li><a href="{{ url_for('registrate') }}">Registrace</a></li>
     <li><a href="{{ url_for('login') }}">Login</a></li>
     <li><a href="{{ url_for('logout') }}">Logout</a></li>
   </ul></nav>
@@ -44,7 +50,7 @@
 {% block obsah %}
 
 
-<h1>Flask</h1>
+<h1 id="abc">Flask</h1>
 
 
 <p>Startovací šablona pro webový framework Flask.</p>
@@ -75,8 +81,7 @@ Užitečné odkazy:
 {#{% endfilter %}#}
 </footer>
 
-
-
+<script src="{{ url_for('static', filename='juu.js')}}"></script>
 
 </body>
 </html>

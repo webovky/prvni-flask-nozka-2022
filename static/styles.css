@@ -45,7 +45,7 @@ footer {
   background-color: #ecc8f0; }
 
 .login {
-  display: inline-block;
+  display: block;
   float: right;
   width: 30%;
   border: orange solid 2px;
@@ -58,6 +58,25 @@ footer {
 
 .even {
     background-color: lightblue;
+}
+
+#flash_parent {
+  position: absolute;
+  left: 30%;
+  top: 1ex;
+  width: 40%;
+}
+
+.flash {
+  position: relative;
+  display: block;
+  border: 2px orange solid;
+  border-radius: 20px;
+  padding: 2ex;
+  background-color: white;
+}
+.error {
+  color: red;
 }
 
 
